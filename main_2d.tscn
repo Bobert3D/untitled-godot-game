@@ -1,0 +1,113 @@
+[gd_scene format=3 uid="uid://bqnrn6mtm6lvd"]
+
+[ext_resource type="Texture2D" uid="uid://bcfop2dxfr7vj" path="res://Klaed-Battlecruiser-Engine-ezgif.com-gif-to-sprite-converter (1).png" id="1_a68s1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a68s1"]
+atlas = ExtResource("1_a68s1")
+region = Rect2(0, 0, 611, 482)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4l5f2"]
+atlas = ExtResource("1_a68s1")
+region = Rect2(611, 0, 611, 482)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hhxv"]
+atlas = ExtResource("1_a68s1")
+region = Rect2(1222, 0, 611, 482)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jmyjl"]
+atlas = ExtResource("1_a68s1")
+region = Rect2(1833, 0, 611, 482)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hbw6"]
+atlas = ExtResource("1_a68s1")
+region = Rect2(2444, 0, 611, 482)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7h21"]
+atlas = ExtResource("1_a68s1")
+region = Rect2(0, 482, 611, 482)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofc6w"]
+atlas = ExtResource("1_a68s1")
+region = Rect2(611, 482, 611, 482)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13uql"]
+atlas = ExtResource("1_a68s1")
+region = Rect2(1222, 482, 611, 482)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhyqj"]
+atlas = ExtResource("1_a68s1")
+region = Rect2(1833, 482, 611, 482)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6avo"]
+atlas = ExtResource("1_a68s1")
+region = Rect2(2444, 482, 611, 482)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxeyp"]
+atlas = ExtResource("1_a68s1")
+region = Rect2(0, 964, 611, 482)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_coknk"]
+atlas = ExtResource("1_a68s1")
+region = Rect2(611, 964, 611, 482)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gyc6d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a68s1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4l5f2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8hhxv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jmyjl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1hbw6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7h21")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofc6w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13uql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhyqj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6avo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sxeyp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_coknk")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=1172839136]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1694280124]
+disable_mode = 2
+slide_on_ceiling = false
+safe_margin = 0.8
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=165623619]
+physics_interpolation_mode = 1
+editor_description = "Main Ship 2D Sprite Animated"
+sprite_frames = SubResource("SpriteFrames_gyc6d")
+frame_progress = 0.23611225
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D" unique_id=1494134885]
+position = Vector2(7.99998, -1.9999971)
+scale = Vector2(19.599998, 22.999998)
+polygon = PackedVector2Array(-7.0918365, -2.7391307, -6.071428, -7.347827, -2.2448971, -10.217393, 1.836736, -10.260871, 5.306124, -7.826088, 6.3265324, -6.1304355, 6.530614, -2.608696, 8.928574, -0.956522, 9.79592, 2.304348, 8.826532, 9.739131, -9.540816, 9.826088, -10.153061, 1.826087, -9.183673, -1.0869567)
