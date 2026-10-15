@@ -182,6 +182,12 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gyc6d"]
+size = Vector2(14, 17)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_coknk"]
+distance = -22.0
+
 [node name="Game" type="Node2D" unique_id=1172839136]
 
 [node name="World" type="Node2D" parent="." unique_id=808861976]
@@ -191,6 +197,7 @@ animations = [{
 [node name="Player" type="Node2D" parent="World/Level" unique_id=919386037]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="World/Level/Player" unique_id=1694280124]
+position = Vector2(155, 76)
 disable_mode = 2
 slide_on_ceiling = false
 safe_margin = 0.8
@@ -201,10 +208,20 @@ physics_interpolation_mode = 1
 editor_description = "Main Ship 2D Sprite Animated"
 position = Vector2(-59, 36)
 sprite_frames = SubResource("SpriteFrames_gyc6d")
-animation = &"death"
-frame_progress = 0.1695427
+animation = &"idle"
+frame_progress = 0.36638236
 
 [node name="Camera2D" type="Camera2D" parent="World/Level/Player/CharacterBody2D" unique_id=139974021]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Level/Player/CharacterBody2D" unique_id=1848020298]
+position = Vector2(-59, 35.5)
+shape = SubResource("RectangleShape2D_gyc6d")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="World/Level" unique_id=1787093163]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Level/StaticBody2D" unique_id=1499101834]
+position = Vector2(156, 133)
+shape = SubResource("WorldBoundaryShape2D_coknk")
 
 [node name="Parallax2D_Sky" type="Parallax2D" parent="World" unique_id=1913771259]
 z_index = -10
@@ -212,7 +229,6 @@ scroll_scale = Vector2(0.05, 1)
 repeat_size = Vector2(320, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="World/Parallax2D_Sky" unique_id=222451200]
-position = Vector2(-160, -90)
 texture = ExtResource("8_exwtt")
 centered = false
 
@@ -222,7 +238,6 @@ scroll_scale = Vector2(0.15, 1)
 repeat_size = Vector2(320, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="World/Parallax2D_Sky-Planets" unique_id=470323752]
-position = Vector2(-160, -90)
 texture = ExtResource("7_coknk")
 centered = false
 
@@ -232,7 +247,6 @@ scroll_scale = Vector2(0.3, 1)
 repeat_size = Vector2(320, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="World/Parallax2D_Land" unique_id=1282797231]
-position = Vector2(-160, -90)
 texture = ExtResource("6_sxeyp")
 centered = false
 
@@ -242,7 +256,6 @@ scroll_scale = Vector2(0.5, 1)
 repeat_size = Vector2(320, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="World/Parallax2D_Land2" unique_id=1018689359]
-position = Vector2(-160, -90)
 texture = ExtResource("5_q6avo")
 centered = false
 
@@ -252,7 +265,6 @@ scroll_scale = Vector2(0.7, 1)
 repeat_size = Vector2(320, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="World/Parallax2D_Land3" unique_id=2132557989]
-position = Vector2(-160, -90)
 texture = ExtResource("4_yhyqj")
 centered = false
 
@@ -263,6 +275,5 @@ scroll_offset = Vector2(-17, 11)
 repeat_size = Vector2(320, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="World/Parallax2D_Land4" unique_id=579957063]
-position = Vector2(-160, -90)
 texture = ExtResource("3_13uql")
 centered = false
