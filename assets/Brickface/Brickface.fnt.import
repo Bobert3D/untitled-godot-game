@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://cl043aj7a45q6"
+path="res://.godot/imported/Brickface.fnt-91fdb11388dcd244740c7a577f65a8df.fontdata"
+
+[deps]
+
+source_file="res://assets/Brickface/Brickface.fnt"
+dest_files=["res://.godot/imported/Brickface.fnt-91fdb11388dcd244740c7a577f65a8df.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2

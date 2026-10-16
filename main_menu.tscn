@@ -1,0 +1,192 @@
+[gd_scene format=3 uid="uid://d3445vce7kw1f"]
+
+[ext_resource type="FontFile" uid="uid://cl043aj7a45q6" path="res://assets/Brickface/Brickface.fnt" id="1_06t4h"]
+[ext_resource type="Texture2D" uid="uid://drig2paki6kk2" path="res://assets/Seperate files/stand1.png" id="3_8qtwp"]
+[ext_resource type="Texture2D" uid="uid://dheogbdg2m6l5" path="res://assets/Seperate files/base.png" id="3_8u0te"]
+[ext_resource type="Texture2D" uid="uid://buf3522asv66f" path="res://assets/Seperate files/fly1.png" id="3_j5v2v"]
+[ext_resource type="Texture2D" uid="uid://1kpqx3b776x7" path="res://assets/Seperate files/walk1.png" id="3_nlkkf"]
+[ext_resource type="Script" uid="uid://dxmoo326a3nf7" path="res://walk.gd" id="3_qe12f"]
+[ext_resource type="Texture2D" uid="uid://duvv6nc0a4y6e" path="res://assets/Seperate files/stand2.png" id="4_dy7ct"]
+[ext_resource type="Texture2D" uid="uid://bswksv5p41yx1" path="res://assets/Seperate files/fly2.png" id="4_iotk1"]
+[ext_resource type="Texture2D" uid="uid://blotl2et1fyq0" path="res://assets/Seperate files/walk2.png" id="4_qe12f"]
+[ext_resource type="Texture2D" uid="uid://dk4b08hsw7kbb" path="res://assets/Seperate files/walk3.png" id="5_8qtwp"]
+[ext_resource type="Texture2D" uid="uid://b53waap1xibu6" path="res://assets/Seperate files/fly3.png" id="5_w44g7"]
+[ext_resource type="Texture2D" uid="uid://bi4ed601gemmi" path="res://assets/Seperate files/fly4.png" id="6_cm266"]
+[ext_resource type="Texture2D" uid="uid://6vmccm3gxnm6" path="res://assets/Seperate files/walk4.png" id="6_dy7ct"]
+[ext_resource type="Texture2D" uid="uid://ctppq3ufrxfmj" path="res://assets/Seperate files/lookingback.png" id="7_g8g3n"]
+[ext_resource type="Texture2D" uid="uid://blcaauj6f0dbp" path="res://assets/Seperate files/talk1.png" id="9_cm266"]
+[ext_resource type="Texture2D" uid="uid://j3plq807dwaa" path="res://assets/Seperate files/blink.png" id="9_oiatc"]
+[ext_resource type="Texture2D" uid="uid://d23n8wajfru6a" path="res://assets/Seperate files/talk2.png" id="10_g8g3n"]
+[ext_resource type="Texture2D" uid="uid://c8dp2k7ui78dk" path="res://assets/Seperate files/talk3.png" id="11_8u0te"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g7b7a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_8u0te")
+}],
+"loop": 1,
+"name": &"base",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_oiatc")
+}],
+"loop": 1,
+"name": &"blink",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_j5v2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_iotk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_w44g7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_cm266")
+}],
+"loop": 1,
+"name": &"fly",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_g8g3n")
+}],
+"loop": 1,
+"name": &"look-back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_8qtwp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dy7ct")
+}],
+"loop": 1,
+"name": &"stand",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_cm266")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_g8g3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_8u0te")
+}],
+"loop": 1,
+"name": &"talk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_nlkkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qe12f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8qtwp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dy7ct")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qe12f"]
+size = Vector2(22, 22)
+
+[node name="Control" type="Control" unique_id=1204654737]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1375634665]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="ColorRect" unique_id=1119381797]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/CenterContainer" unique_id=2054106257]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/CenterContainer/VBoxContainer" unique_id=539861319]
+custom_minimum_size = Vector2(300, 60)
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("1_06t4h")
+theme_override_font_sizes/normal_font_size = 18
+text = "Welcome...
+to...
+the...
+
+Untitled Godot Game...
+
+Enter at your own risk..."
+fit_content = true
+
+[node name="MenuButton" type="MenuButton" parent="ColorRect/CenterContainer/VBoxContainer" unique_id=1263509446]
+layout_mode = 2
+toggle_mode = false
+alignment = 2
+item_count = 3
+popup/item_0/text = "New Game?"
+popup/item_0/id = 0
+popup/item_1/text = "Load Game?"
+popup/item_1/id = 1
+popup/item_2/text = "Quit..."
+popup/item_2/id = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect/CenterContainer/VBoxContainer" unique_id=952393933]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=78695738]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 4.0
+offset_right = -8.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+tooltip_text = "HEY! Not this! Play the game not the box!"
+
+[node name="Node2D" type="Node2D" parent="." unique_id=629415317]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Node2D" unique_id=769873814]
+position = Vector2(160, 156)
+script = ExtResource("3_qe12f")
+
+[node name="duck" type="AnimatedSprite2D" parent="Node2D/CharacterBody2D" unique_id=1584436612]
+sprite_frames = SubResource("SpriteFrames_g7b7a")
+animation = &"talk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/CharacterBody2D" unique_id=1054370199]
+shape = SubResource("RectangleShape2D_qe12f")

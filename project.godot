@@ -27,10 +27,6 @@ window/stretch/mode="viewport"
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
-[gui]
-
-theme/custom_font="uid://bt1b34kkia11u"
-
 [input]
 
 left={
